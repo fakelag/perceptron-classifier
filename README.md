@@ -29,8 +29,8 @@ pub const SHAPE_B: &str = "TRIANGLE";
 
 <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_1.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_2.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_3.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_4.jpg" width="175" />
 
-## Snapshots
+## Layer images
 
-Enable `IMAGE_EPOCH_SNAPSHOTS` to take snapshots while training. Snapshot images will be stored in `training/`. The snapshot frequency scales with current epoch number.
+Enable `IMAGE_EPOCH_SNAPSHOTS` to take image snapshots while training. Images will be stored in `training/`.
 
 <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_0.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_5.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_10.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_100.jpg" width="175" />
