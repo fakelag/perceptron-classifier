@@ -23,26 +23,24 @@ pub const SHAPE_B: &str = "TRIANGLE";
 
 #### Dataset A (sample)
 
-<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg" width="250" />
-
-![rectangle 1](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg =250x250)
-![rectangle 2](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_2.jpg =250x250)
-![rectangle 3](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_3.jpg =250x250)
-![rectangle 4](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_4.jpg =250x250)
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_2.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_3.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_4.jpg" width="175" />
 
 #### Dataset B (sample)
 
-![triangle 1](https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_1.jpg =250x250)
-![triangle 2](https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_2.jpg =250x250)
-![triangle 3](https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_3.jpg =250x250)
-![triangle 4](https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_4.jpg =250x250)
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_1.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_2.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_3.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/TRIANGLE_4.jpg" width="175" />
 
 ## Snapshots
 
 Enable `IMAGE_EPOCH_SNAPSHOTS` to take snapshots while training. Snapshot images will be stored in `training/`. The snapshot frequency scales with current epoch number.
 
-![epoch 0](https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_0.jpg =250x250)
-![epoch 5](https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_5.jpg =250x250)
-![epoch 10](https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_10.jpg =250x250)
-![epoch 100](https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_100.jpg =250x250)
-![epoch final](https://github.com/fakelag/perceptron-classifier/blob/master/training/final.jpg =250x250)
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_0.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_5.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_10.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_100.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/final.jpg" width="175" />
