@@ -23,10 +23,7 @@ pub const SHAPE_B: &str = "TRIANGLE";
 
 #### Dataset A (sample)
 
-<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg" width="175" />
-<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_2.jpg" width="175" />
-<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_3.jpg" width="175" />
-<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_4.jpg" width="175" />
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_2.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_3.jpg" width="175" /> <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_4.jpg" width="175" />
 
 #### Dataset B (sample)
 
@@ -43,4 +40,3 @@ Enable `IMAGE_EPOCH_SNAPSHOTS` to take snapshots while training. Snapshot images
 <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_5.jpg" width="175" />
 <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_10.jpg" width="175" />
 <img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/epoch_100.jpg" width="175" />
-<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/final.jpg" width="175" />
