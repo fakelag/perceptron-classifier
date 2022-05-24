@@ -23,6 +23,8 @@ pub const SHAPE_B: &str = "TRIANGLE";
 
 #### Dataset A (sample)
 
+<img src="https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg" width="250" />
+
 ![rectangle 1](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_1.jpg =250x250)
 ![rectangle 2](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_2.jpg =250x250)
 ![rectangle 3](https://github.com/fakelag/perceptron-classifier/blob/master/training/RECT_3.jpg =250x250)
