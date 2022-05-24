@@ -20,21 +20,22 @@ fn make_shape(shape: &str, rng: &mut ChaCha8Rng) -> Array2<f64> {
 	}
 }
 
-fn train(weights: &mut Array2<f64>, rng: &mut ChaCha8Rng, epochs: usize) {
+fn train(weights: &mut Array2<f64>, epochs: usize) {
 	let mut new_weights = weights.clone();
 
 	for epoch in 0..epochs {
+		let mut rng = ChaCha8Rng::seed_from_u64(perceptron::config::TRAIN_SEED);
 		let mut errors = 0;
 
 		for _ in 0..perceptron::config::TRAIN_STEP {
-			let shape_a = make_shape(perceptron::config::SHAPE_A, rng);
+			let shape_a = make_shape(perceptron::config::SHAPE_A, &mut rng);
 
 			if predict(&new_weights, &shape_a) == true {
 				new_weights.sub_assign(&shape_a);
 				errors += 1;
 			}
 
-			let shape_b = make_shape(perceptron::config::SHAPE_B, rng);
+			let shape_b = make_shape(perceptron::config::SHAPE_B, &mut rng);
 
 			if predict(&new_weights, &shape_b) == false {
 				new_weights.add_assign(&shape_b);
@@ -43,7 +44,7 @@ fn train(weights: &mut Array2<f64>, rng: &mut ChaCha8Rng, epochs: usize) {
 		}
 
 		println!(
-			"Training Epoch #{} errors {} / {} (accuracy={}%)",
+			"Training Epoch #{} errors {} / {} (accuracy={:.2}%)",
 			epoch + 1,
 			errors,
 			perceptron::config::TRAIN_STEP * 2,
@@ -77,17 +78,18 @@ fn train(weights: &mut Array2<f64>, rng: &mut ChaCha8Rng, epochs: usize) {
 	weights.clone_from(&new_weights);
 }
 
-fn validate(weights: &mut Array2<f64>, rng: &mut ChaCha8Rng) {
+fn validate(weights: &mut Array2<f64>) {
+	let mut rng = ChaCha8Rng::seed_from_u64(perceptron::config::VALIDATE_SEED);
 	let mut errors = 0;
 
 	for _ in 0..perceptron::config::VALIDATE_STEP {
-		let shape_a = make_shape(perceptron::config::SHAPE_A, rng);
+		let shape_a = make_shape(perceptron::config::SHAPE_A, &mut rng);
 
 		if predict(&weights, &shape_a) == true {
 			errors += 1;
 		}
 
-		let shape_b = make_shape(perceptron::config::SHAPE_B, rng);
+		let shape_b = make_shape(perceptron::config::SHAPE_B, &mut rng);
 
 		if predict(&weights, &shape_b) == false {
 			errors += 1;
@@ -95,7 +97,7 @@ fn validate(weights: &mut Array2<f64>, rng: &mut ChaCha8Rng) {
 	}
 
 	println!(
-		"Validation errors {} / {} (accuracy={}%)",
+		"Validation errors {} / {} (accuracy={:.2}%)",
 		errors,
 		perceptron::config::VALIDATE_STEP * 2,
 		100.0 - ((errors as f64) / ((perceptron::config::VALIDATE_STEP * 2) as f64) * 100.0)
@@ -131,14 +133,9 @@ fn main() {
 		perceptron::config::LAYER_WIDTH
 	), 0.0);
 
-	let mut train_rng = ChaCha8Rng::seed_from_u64(perceptron::config::TRAIN_SEED);
-
-	let mut validate_rng1 = ChaCha8Rng::seed_from_u64(perceptron::config::VALIDATE_SEED);
-	let mut validate_rng2 = ChaCha8Rng::seed_from_u64(perceptron::config::VALIDATE_SEED);
-
-	validate(&mut weights, &mut validate_rng1);
-	train(&mut weights, &mut train_rng, perceptron::config::TRAIN_EPOCHS);
-	validate(&mut weights, &mut validate_rng2);
+	validate(&mut weights);
+	train(&mut weights, perceptron::config::TRAIN_EPOCHS);
+	validate(&mut weights);
 
 	if perceptron::config::IMAGE_EPOCH_SNAPSHOTS {
 		perceptron::utils::save_as_jpg(
